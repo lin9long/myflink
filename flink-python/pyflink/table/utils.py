@@ -51,7 +51,6 @@ def tz_convert_from_internal(s, t: DataType, local_tz):
     returns a converted series.
     """
     if type(t) == LocalZonedTimestampType:
-        print("type is LocalZonedTimestampType")
         return s.dt.tz_localize(local_tz)
     else:
         return s
